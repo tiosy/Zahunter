@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "DetailViewController.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "PizzaLocation.h"
@@ -103,26 +104,24 @@
 
             PizzaLocation *pizzaLoc =[PizzaLocation new];
             pizzaLoc.placemarkName = mapItem.placemark.name;
+            pizzaLoc.latitude = mapItem.placemark.location.coordinate.latitude;
+            pizzaLoc.longitude = mapItem.placemark.location.coordinate.longitude;
             pizzaLoc.mapItem = mapItem;
 
             [self.pizzaArray addObject:pizzaLoc];
+            if(self.tableviewArray.count <4)
+            {
+                [self.tableviewArray addObject:pizzaLoc];
+            }
         }
 
         for (PizzaLocation *pL in self.pizzaArray) {
             NSLog(@"===%@",pL.placemarkName);
         }
 
-        for (int i=0; i<self.pizzaArray.count; i++)
-        {
-            if(i<4){ //only show 4 pizza locations
-            [self.tableviewArray addObject:[self.pizzaArray objectAtIndex:i]];
-            }
-        }
+         NSLog(@"===%ld===%ld",self.tableviewArray.count, self.pizzaArray.count);
 
-
-        NSLog(@"===%ld===%ld",self.tableviewArray.count, self.pizzaArray.count);
-
-
+        //in block...async process...need reload data
         [self.tableview reloadData];
 
     }];
@@ -164,6 +163,17 @@
 
 
 }
+
+#pragma mark - segue to detail VC
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    //SET THE DESTINATION VIEW CONTROLLER
+    DetailViewController *detailVC = segue.destinationViewController;
+    detailVC.pizzaArray = self.tableviewArray; //pass only 4 pizza locations
+
+    
+}
+
 
 
 #pragma mark - UITableViewDataSource, UITableViewDelegate Protocols

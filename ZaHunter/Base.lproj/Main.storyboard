@@ -43,14 +43,62 @@
                             <constraint firstItem="EAV-ES-Txd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="kRK-PW-DWn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RUG-iz-9XX"/>
+                    <navigationItem key="navigationItem" id="RUG-iz-9XX">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="mj7-5I-pLL">
+                            <connections>
+                                <segue destination="dqP-f8-xOB" kind="show" identifier="detail" id="I4c-vn-MQg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableview" destination="EAV-ES-Txd" id="QMW-yt-QNU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1683" y="136"/>
+            <point key="canvasLocation" x="1249.5" y="-393"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="bj4-Ag-GLj">
+            <objects>
+                <viewController id="dqP-f8-xOB" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9nb-sh-ryy"/>
+                        <viewControllerLayoutGuide type="bottom" id="wge-BT-pTa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="btY-aL-bIR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xtn-2u-FXV">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="-32" width="400" height="600"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="dqP-f8-xOB" id="Z4h-oZ-L3a"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="xtn-2u-FXV"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="xtn-2u-FXV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="mapview" destination="xtn-2u-FXV" id="4Y9-nT-mau"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6nS-f8-hB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008.5" y="-393"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mfp-J5-bma">

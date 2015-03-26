@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E4997B91AC43A190085EB9D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E4997B81AC43A190085EB9D /* DetailViewController.m */; };
 		6ED973181AC3CD3100AC714C /* PizzaLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED973171AC3CD3100AC714C /* PizzaLocation.m */; };
 		6EE0605D1AC3875D00B4747B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0605C1AC3875D00B4747B /* main.m */; };
 		6EE060601AC3875D00B4747B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0605F1AC3875D00B4747B /* AppDelegate.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E4997B71AC43A190085EB9D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		6E4997B81AC43A190085EB9D /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		6ED973161AC3CD3100AC714C /* PizzaLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PizzaLocation.h; sourceTree = "<group>"; };
 		6ED973171AC3CD3100AC714C /* PizzaLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PizzaLocation.m; sourceTree = "<group>"; };
 		6EE060571AC3875D00B4747B /* ZaHunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZaHunter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +91,8 @@
 				6EE0605F1AC3875D00B4747B /* AppDelegate.m */,
 				6EE060611AC3875D00B4747B /* RootViewController.h */,
 				6EE060621AC3875D00B4747B /* RootViewController.m */,
+				6E4997B71AC43A190085EB9D /* DetailViewController.h */,
+				6E4997B81AC43A190085EB9D /* DetailViewController.m */,
 				6ED973161AC3CD3100AC714C /* PizzaLocation.h */,
 				6ED973171AC3CD3100AC714C /* PizzaLocation.m */,
 				6EE060641AC3875D00B4747B /* Main.storyboard */,
@@ -224,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E4997B91AC43A190085EB9D /* DetailViewController.m in Sources */,
 				6EE060631AC3875D00B4747B /* RootViewController.m in Sources */,
 				6ED973181AC3CD3100AC714C /* PizzaLocation.m in Sources */,
 				6EE060601AC3875D00B4747B /* AppDelegate.m in Sources */,
